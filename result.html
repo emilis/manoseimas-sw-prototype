@@ -17,6 +17,22 @@ results:
     -   name:   Remigijus Žemaitaitis
         score:  69
         url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/remigijus_zemaitaitis.jpg
+party_results:
+    -   name:   Tėvynės sąjungos-Lietuvos krikščionių demokratų frakcija
+        score:  78
+        url:    http://manobalsas.lt/politikai/logos/part_37.gif
+    -   name:   Lietuvos socialdemokratų partijos frakcija
+        score:  72
+        url:    http://manobalsas.lt/politikai/logos/part_20.gif
+    -   name:   Liberalų ir centro sąjungos frakcija
+        score:  67
+        url:    http://manobalsas.lt/politikai/logos/part_3.gif
+    -   name:   Liberalų sąjūdžio frakcija
+        score:  66
+        url:    http://manobalsas.lt/politikai/logos/part_18.gif
+    -   name:   Frakcija "Tvarka ir teisingumas"
+        score:  56
+        url:    http://manobalsas.lt/politikai/logos/part_30.gif
 categories:
     -   title:  Svarbiausi 2008-2012 m. Seimo klausimai
         questions:
@@ -90,17 +106,44 @@ categories:
 
     <div class="span5">
         <h3>Testo rezultatai</h3>
-        <table class="table table-condensed" style="width: 100%">
-            <tbody>
-                {% for r in page.results %}
-                <tr>
-                    <td><img style="height: 56px; max-width: 56px;" title="{{ r.name }}" src="{{ r.url }}"></td>
-                    <td><p><b>{{ r.name }}</b></p>
-                        <p><img style="height: 10px; width: {{ r.score | times:2 }}px;" src="/static/img/green.png"> {{ r.score }}%</p>
-                </td></tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#politicians" data-toggle="tab">Seimo nariai</a></li>
+            <li>
+                <a href="#parties" data-toggle="tab">Frakcijos</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="politicians">
+                <table class="table table-condensed" style="width: 100%">
+                    <tbody>
+                        {% for r in page.results %}
+                        <tr>
+                            <td><img style="height: 56px; max-width: 56px;" title="{{ r.name }}" src="{{ r.url }}"></td>
+                            <td><p><b>{{ r.name }}</b></p>
+                                <p><img style="height: 10px; width: {{ r.score | times:2 }}px;" src="/static/img/green.png">
+                                {{ r.score }}%</p>
+                        </td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="parties">
+                <table class="table table-condensed" style="width: 100%">
+                    <tbody>
+                        {%for p in page.party_results %}
+                        <tr>
+                            <td><img style="height: 56px; width: 56px" title="{{ p.name }}" src="{{ p.url }}"></td>
+                            <td><p><b>{{ p.name }}</b></p>
+                                <p><img style="height: 10px; width: {{ p.score | times:2 }}px;" src="/static/img/green.png">
+                                {{ p.score }}%</p>
+                        </td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <p><a href="#" class="btn">
             <i class="icon icon-bookmark"></i> Išsaugok savo rezultatus</a></p>
         <hr>
