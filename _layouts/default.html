@@ -21,13 +21,14 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" type="text/css" href="/static/css/screen.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/proto.css">
 
  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
   <!-- All JavaScript at the bottom, except for Modernizr / Respond.
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="/static/js/modernizr-2.0.6.js"></script>
+    <script src="/static/js/modernizr-2.0.6.min.js"></script>
 </head>
 
 <body>
@@ -76,14 +77,8 @@
         <li><a href="#">Teisėkūra</a></li>
     </ul>
 
-    <div class="row">
-        <div class="span9">
-            {{ content }}
-        </div>
-        <div class="span3">
-            Sidebar
-        </div>
-    </div>
+    {{ content }}
+
     <footer>
         <p>manoseimas.lt team</p>
     </footer>
@@ -93,7 +88,14 @@
   <!-- JavaScript at the bottom for fast page loading -->
   
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="/static/js/scripts.js"></script>
+    <script src="/static/js/scripts.js"></script>
+    <script src="/static/js/bootstrap/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap/bootstrap-transition.js"></script>
+    <script src="/static/js/proto.js"></script>
+
+ 
   <!-- end scripts-->
 	
   <!-- Change UA-XXXXX-X to be your site's ID

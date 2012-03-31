@@ -1,0 +1,48 @@
+---
+layout: default
+title:  Panašiausiai balsuojantys Seimo nariai
+questions:
+    -   title:  Aš palaikau šeimos koncepciją
+    -   title:  Aš palaikau PVM lengvatų panaikinimą
+    -   title:  Aš palaikau NT mokesčio įvedimą
+politicians:
+    for:
+        -   name:   Andrius Kubilius
+            score:  +88%
+        -   name:   Vytautas Gapšys
+            score:  +77%
+        -   name:   Audrius Butkevičius
+            score:  +66%
+    against:
+        -   name:   Valentinas Mazuronis
+            score:  -22%
+        -   name:   Eligijus Masiulis
+            score:  -33%
+        -   name:   Algirdas Čaplikas
+            score:  -44%
+---
+<h1>{{ page.title }}</h1>
+
+<div class="well">
+    <table class="table table-compact">
+        <tbody>
+            {% for p in page.politicians.for %}
+            <tr class="success">
+                <td>{{ p.name }}</td>
+                <td>{{ p.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+{% for question in page.questions %}
+<div class="well">
+    <h3>{{ question.title }}</h3>
+
+</div>
+{% endfor %}
+
+

@@ -1,0 +1,11 @@
+h3 {
+    margin-bottom:  16px;
+}
+
+.nav-pills > .active > a {
+    background-color: #3c8700;
+}
+
+.btn-success {
+    font-weight:    bold;
+}

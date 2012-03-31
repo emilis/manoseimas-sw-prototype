@@ -1,0 +1,13 @@
+{
+    "mps":  [
+        {   "name":     "Gediminas Kirkilas",
+            "score":    "62",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/gediminas_kirkilas.jpg" },
+        {   "name":     "Dalia Teišerskytė",
+            "score":    "58",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/dalia_teiserskyte.jpg" },
+        {   "name":     "Antanas Nedzinskas",
+            "score":    "52",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/antanas_nedzinskas.jpg" }
+    ]
+}

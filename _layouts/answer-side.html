@@ -1,0 +1,13 @@
+---
+layout: nil
+---
+<table class="table table-condensed">
+    <tbody>
+        {% for mp in page.mps %}
+        <tr>
+            <td>{{ mp.score }}</td>
+            <td><img src="{{ mp.photo }}" title="{{ mp.name }}"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

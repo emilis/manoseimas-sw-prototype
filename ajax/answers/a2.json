@@ -1,0 +1,13 @@
+{
+    "mps":  [
+        {   "name":     "Antanas Nedzinskas",
+            "score":    "50",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/antanas_nedzinskas.jpg" },
+        {   "name":     "Petras Gražulis",
+            "score":    "45",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/petras_grazulis.jpg" },
+        {   "name":     "Česlovas Juršėnas",
+            "score":    "42",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/ceslovas_jursenas.jpg" }
+    ]
+}

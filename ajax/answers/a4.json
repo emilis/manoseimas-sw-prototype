@@ -1,0 +1,13 @@
+{
+    "mps":  [
+        {   "name":     "Eligijus Masiulis",
+            "score":    "84",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/eligijus_masiulis.jpg" },
+        {   "name":     "Irena Degutienė",
+            "score":    "78",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/irena_degutiene.jpg" },
+        {   "name":     "Gediminas Kirkilas",
+            "score":    "64",
+            "url":      "http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/gediminas_kirkilas.jpg" }
+    ]
+}
