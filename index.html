@@ -1,57 +1,13 @@
 ---
 layout:     default
-title:      Atsakyk į 10 klausimų -- sužinok, kuris Seimo narys balsuoja pagal tave
-questions:
-    -   title:          Ar aukštojo mokslo reforma buvo reikalinga?
-        description:    (studijų finansavimas krepšelių principu, universitetų valdymo pertvarka ir universitetų konsolidacija)
-    -   title:          Ar pritariate priimtai šeimos politikos koncepcijai?
-        description:    (šeimos apibrėžimas santuokos pagrindu ir pan.)
-    -   title:          Ar reikėtų pertvarkyti Seimo narių darbo reglamentavimą?
-        description:    (baudos už posėdžių nelankymą, neleisti automobilių nuomos, griežtai apibrėžti atostogas)        
-    -   title:          Ar manote, kad reikia visiškai drausti alkoholio reklamą?
-        description:   "&nbsp;"
-    -   title:          Ar Seimas turėtų kištis į teisėsaugos darbą pedofilijos byloje?
-        description:    (Seimas atšaukė diskusiją dėl įvykių Garliavoje ir teisėsaugos krizės)
+title:      Prototipas
 ---
 <div class="row">
     <div class="span12">
         <h1>{{ page.title }}</h1>
-
-        <ul class="nav nav-pills">
-            {% for q in page.questions %}
-            <li id="qpill{{ forloop.index }}" class="qpill {% if forloop.index0 == 0 %}active{% endif %}">
-                <a href="#q{{ forloop.index }}" data-toggle="pill">{{ forloop.index }}</a></li>
-            {% endfor %}
-        </ul>
+        <p>
+            <a href="/questions.html" class="btn btn-primary">Pradėti testą</a>
+        </p>
     </div>
 </div>
 
-<div class="row">
-    <div class="span7">
-        <div class="tab-content">
-            {% for q in page.questions %}
-            <div class="tab-pane {% if forloop.index0 == 0 %}active{% endif %}" id="q{{ forloop.index }}">
-                <div class="well">
-                    <h3>{{ q.title }}</h3>
-                    <p>{{ q.description }}</p>
-                    <div>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tvirtai už</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Už</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Nei už, nei prieš</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Prieš</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tvirtai prieš</button>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div class="span5">
-        Rezultatai:
-        <div id="side-result">
-            <p>Balsuokite kairėje</p>
-        </div>
-    </div>
-
-</div>
