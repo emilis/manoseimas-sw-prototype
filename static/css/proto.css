@@ -2,6 +2,11 @@ h3 {
     margin-bottom:  16px;
 }
 
+.tab-pane > table.table > tbody > tr > td {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+}
+
 .nav-pills > .active > a {
     background-color: #3c8700;
 }
