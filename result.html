@@ -1,5 +1,77 @@
 ---
 layout: default
-title:  ??
+title:  Jūsų testo rezultatai
+results:
+    -   name:   Eligijus Masiulis
+        score:  86
+        url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/eligijus_masiulis.jpg
+    -   name:   Irena Degutienė
+        score:  85
+        url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/irena_degutiene.jpg
+    -   name:   Vytautas Gapšys
+        score:  79
+        url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/vytautas_gapsys.jpg
+    -   name:   Algirdas Sysas
+        score:  76
+        url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/algirdas_sysas.jpg
+    -   name:   Remigijus Žemaitaitis
+        score:  69
+        url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/remigijus_zemaitaitis.jpg
 ---
-haha
+<div class="row">
+    <div class="span7">
+        <div class="well well-importante">
+            <h3>Pasiūlyk šį testą savo draugams:</h3>
+            <p>
+                <div class="fb-like" data-send="false" data-layout="button_count" data-width="36" data-show-faces="false"></div>
+
+                <!-- google+ -->
+                <!-- Place this tag where you want the +1 button to render -->
+                <g:plusone size="medium" annotation="none"></g:plusone>
+
+                <!-- Place this render call where appropriate -->
+                <script type="text/javascript">
+                  window.___gcfg = {lang: 'lt'};
+
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            </p>
+            <h3>Premk ManoSeimas.lt:</h3>
+            <a class="btn btn-aukok" href="https://www.aukok.lt/Projektai/Padekime-rinkejams-atsakingai-pasiruosti-Seimo-rinkimams">
+                <i class="icon-white icon-heart"></i> Aukok.lt
+            </a>
+        </div>
+
+        <h3>Daugiau klausimų, diskusijos:</h3>
+        <ul>
+            <li>...</li>
+        </ul>
+    </div>
+
+    <div class="span5">
+        <h3>Testo rezultatai</h3>
+        <table class="table table-condensed" style="width: 100%">
+            <tbody>
+                {% for r in page.results %}
+                <tr>
+                    <td><img style="height: 56px; max-width: 56px;" title="{{ r.name }}" src="{{ r.url }}"></td>
+                    <td><b>{{ r.name }}</b><br>
+                        <img style="height: 10px; width: {{ r.score | times:2 }}px;" src="/static/img/green.png"> {{ r.score }}%</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p><a href="#" class="btn">
+            <i class="icon icon-bookmark"></i> Išsaugok savo rezultatus</a></p>
+        <hr>
+        <p><a href="#">Daugiau rezultatų »</a></p>
+        <p><a href="#">Kaip mes tai apskaičiavome?</a></p>
+    </div>
+</div>

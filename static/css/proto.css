@@ -9,3 +9,27 @@ h3 {
 .btn-success {
     font-weight:    bold;
 }
+
+.well-important {
+    background-color: #3c8700;
+    color:  #fff;
+}
+
+.well-important > h3 {
+    color:  #fff;
+}
+
+.btn-aukok {
+    background-color: #e72c27;
+    background-image: -moz-linear-gradient(center top , #ff8582, #E72C27 25%, #E72C27);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff8582), color-stop(25%, #E72C27), to(#E72C27));
+    background-image: -webkit-linear-gradient(#ff8582, #e72c27 25%, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ff8582, #e72c27 25%, #e6e6e6);
+    background-image: -ms-linear-gradient(#ff8582, #e72c27 25%, #e6e6e6);
+    background-image: -o-linear-gradient(#ff8582, #e72c27 25%, #e6e6e6);
+    background-image: linear-gradient(#ff8582, #e72c27 25%, #e6e6e6);
+    border-color: #E72C27 #E72C27 #d92925;
+    color: #fff;
+    font-weight:    bold;
+    text-shadow: 0 -1px 1px rgba(0,0,0, 0.3);
+}
