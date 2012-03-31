@@ -1,6 +1,6 @@
 ---
 layout:     default
-title:      Atsakyk į 10 klausimų -- sužinok, kuris Seimo narys balsuoja pagal tave
+title:      Atsakyk į 10 klausimų &ndash; sužinok, kuris Seimo narys balsuoja pagal tave
 questions:
     -   title:          Ar aukštojo mokslo reforma buvo reikalinga?
         description:    (studijų finansavimas krepšelių principu, universitetų valdymo pertvarka ir universitetų konsolidacija)
@@ -16,13 +16,20 @@ questions:
 <div class="row">
     <div class="span12">
         <h1>{{ page.title }}</h1>
+    </div>
+</div>
 
+<div class="row">
+    <div class="span7">
         <ul class="nav nav-pills">
             {% for q in page.questions %}
             <li id="qpill{{ forloop.index }}" class="qpill {% if forloop.index0 == 0 %}active{% endif %}">
                 <a href="#q{{ forloop.index }}" data-toggle="pill">{{ forloop.index }}</a></li>
             {% endfor %}
         </ul>
+    </div>
+    <div class="span5">
+        <h4><br>Testo rezultatai:</h4>
     </div>
 </div>
 
@@ -48,9 +55,8 @@ questions:
     </div>
 
     <div class="span5">
-        Rezultatai:
         <div id="side-result">
-            <p>Balsuokite kairėje</p>
+            <p>Norėdami pamatyti rezultatus, atsakykite į klausimą.</p>
         </div>
     </div>
 
