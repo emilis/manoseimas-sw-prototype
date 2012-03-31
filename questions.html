@@ -41,13 +41,13 @@ questions:
                 <div class="well">
                     <h3>{{ q.title }}</h3>
                     <p>{{ q.description }}</p>
-                    <div>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tvirtai už</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Už</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Nei už, nei prieš</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Prieš</button>
-                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tvirtai prieš</button>
-                    </div>
+                    <p style="margin-top: 20px;">
+                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tikrai taip</button>
+                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Taip</button>
+                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Nei taip, nei ne</button>
+                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Ne</button>
+                        <button class="btn btn-success" onclick="submitQuestion({{ forloop.index }})">Tikrai ne</button>
+                    </p>
                 </div>
             </div>
             {% endfor %}
