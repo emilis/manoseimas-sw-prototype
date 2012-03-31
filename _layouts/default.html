@@ -1,19 +1,117 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% capture timestamp %}{{ site.time | date_to_xmlschema }}{% endcapture %}
-        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" type="text/css" href="/static/default.css?{{ timestamp }}">
-        <script src="/static/default.js?{{ timestamp }}"></script>
-    </head>
-    <body>
-        <div class="content" style="margin-top: 40px">
-            <div class="row">
-                <div class="span4 offset4">
-                    {{ content }}
-                </div>
-            </div>
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/static/css/screen.css">
+
+ <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="/static/js/modernizr-2.0.6.js"></script>
+</head>
+
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="/" class="brand">manoseimas.lt</a>
+        <ul class="nav pull-right">
+          <li class="divider-vertical"></li>
+          {% if page.user %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-user icon-white"></i> {{ page.user }}
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ page.profile.url }}">
+                <i class="icon-user"></i> Profilis</a></li>
+              <li><a href="#logout">
+                <i class="icon-off"></i> Atsijungti</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-user icon-white"></i> Prisijungti
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#google">Google</a></li>
+              <li><a href="#facebook">Facebook</a></li>
+              <li><a href="#openid">OpenID</a></li>
+            </ul>
+          </li>
+          {% endif %}
+        </ul>
+        <form action="" method="get" class="navbar-search pull-right">
+          <input type="text" name="q" placeholder="Paieška" class="search-query">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#legislation">Įstatymai</a></li>
+        <li><a href="#">Politikai</a></li>
+        <li><a href="#">Teisėkūra</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="span9">
+            {{ content }}
         </div>
-    </body>
+        <div class="span3">
+            Sidebar
+        </div>
+    </div>
+    <footer>
+        <p>manoseimas.lt team</p>
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="/static/js/scripts.js"></script>
+  <!-- end scripts-->
+	
+  <!-- Change UA-XXXXX-X to be your site's ID
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
 </html>
