@@ -17,6 +17,32 @@ results:
     -   name:   Remigijus Žemaitaitis
         score:  69
         url:    http://www3.lrs.lt/home/seimo_nariu_nuotraukos/2008/remigijus_zemaitaitis.jpg
+categories:
+    -   title:  Svarbiausi 2008-2012 m. Seimo klausimai
+        questions:
+        -   title:  Ar aukštojo mokslo reforma buvo reikalinga?
+            score:  34
+        -   title:  Ar pritariate priimtai šeimos politikos koncepcijai?
+            score:  127
+        -   title:  Ar reikėtų pertvarkyti Seimo narių darbo reglamentavimą?
+            score:  23
+        -   title:  Ar manote, kad reikia visiškai drausti alkoholio reklamą?
+            score:  52
+        -   title:  Ar Seimas turėtų kištis į teisėsaugos darbą pedofilijos byloje?
+            score:  xxx
+    -   title:  Gamtosauga
+        questions:
+        -   title:  Ar reikėtų statyti naują atominę elektrinę?
+            score:  31
+        -   title:  Ar galima leisti keisti žemės paskirtį nacionaliniuose parkuose?
+            score:  24
+    -   title:  Verslas
+        questions:
+        -   title:  Ar reikėtų įteisinti privačių asmenų bankrotą?
+            score:  17
+        -   title:  Ar turguose turėtų būti naudojami kasos aparatai?
+            score:  28
+            
 ---
 <div class="row">
     <div class="span7">
@@ -44,16 +70,22 @@ results:
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
             </p>
-            <h3>Premk ManoSeimas.lt:</h3>
-            <a class="btn btn-aukok" href="https://www.aukok.lt/Projektai/Padekime-rinkejams-atsakingai-pasiruosti-Seimo-rinkimams">
-                <i class="icon-white icon-heart"></i> Aukok.lt
+            <h3>Paremk ManoSeimas.lt:</h3>
+            <a class="btn btn-danger" href="https://www.aukok.lt/Projektai/Padekime-rinkejams-atsakingai-pasiruosti-Seimo-rinkimams">
+                <i class="icon-white icon-heart"></i> <b>Aukok.lt</b>
             </a>
         </div>
 
-        <h3>Daugiau klausimų, diskusijos:</h3>
+        <h3>Nori daugiau? &ndash; Žiūrėk kaip Seimas balsavo kitais klausimais ir pareikšk savo nuomonę:</h3>
+        {% for cat in page.categories %}
+        <p><b>{{ cat.title }}</b></p>
         <ul>
-            <li>...</li>
+            {% for q in cat.questions %}
+            <li><a href="#">{{ q.title }}</a>
+                <a href="#" class="comments">({{ q.score }})</a></li>
+            {% endfor %}
         </ul>
+        {% endfor %}
     </div>
 
     <div class="span5">
@@ -63,8 +95,9 @@ results:
                 {% for r in page.results %}
                 <tr>
                     <td><img style="height: 56px; max-width: 56px;" title="{{ r.name }}" src="{{ r.url }}"></td>
-                    <td><b>{{ r.name }}</b><br>
-                        <img style="height: 10px; width: {{ r.score | times:2 }}px;" src="/static/img/green.png"> {{ r.score }}%</td></tr>
+                    <td><p><b>{{ r.name }}</b></p>
+                        <p><img style="height: 10px; width: {{ r.score | times:2 }}px;" src="/static/img/green.png"> {{ r.score }}%</p>
+                </td></tr>
                 {% endfor %}
             </tbody>
         </table>
