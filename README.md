@@ -1,22 +1,4 @@
-# Sticks
-
-Some building material for web apps.
-
-## Usage
-
-**Compile HTML files into `_site`:**
-
-```
-$ make
-```
-
-**Run a stand-alone server:**
-
-```
-$ make run
-```
-
-Then open <http://localhost:4000/> in your browser.
+# ManoSeimas.lt StartupWeekend Lithuania project prototype
 
 ### Requirements
 
