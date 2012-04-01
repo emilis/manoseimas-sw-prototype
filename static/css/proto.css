@@ -28,3 +28,17 @@ h3 {
     color:  #800;
 }
 
+
+.alert-heading {
+    padding: 4px 6px;
+}
+
+.alert-muted {
+    background-color:   #eee;
+    border-color:       #ddd;
+    color:              #777;
+}
+
+.progress-compact {
+    margin-bottom: 0;
+}
