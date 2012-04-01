@@ -97,8 +97,8 @@ categories:
         <p><b>{{ cat.title }}</b></p>
         <ul>
             {% for q in cat.questions %}
-            <li><a href="#">{{ q.title }}</a>
-                <a href="#" class="comments">({{ q.score }})</a></li>
+            <li><a href="policy-issue.html">{{ q.title }}</a>
+                <a href="policy-issue.html#comments" class="comments">({{ q.score }})</a></li>
             {% endfor %}
         </ul>
         {% endfor %}
